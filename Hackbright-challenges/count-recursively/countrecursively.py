@@ -14,6 +14,12 @@ For example:
 def count_recursively(lst):
     """Return number of items in a list, using recursion."""
 
+    if not lst:
+        return 0
+    else:
+        count = 1 + count_recursively(lst[1:])
+        return count
+
 
 if __name__ == '__main__':
     import doctest
