@@ -1,1 +1,0 @@
-# Hackbright-challenges

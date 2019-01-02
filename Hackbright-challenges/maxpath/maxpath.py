@@ -101,6 +101,10 @@ def make_triangle(levels):
 
 def maxpath(nodes):
     """Given list of nodes in triangle, return high-scoring path."""
+    to_visit = [nodes[0]]
+    max = 0
+    for node in to_visit:
+        current = to_visit.pop()
 
 
 if __name__ == '__main__':
