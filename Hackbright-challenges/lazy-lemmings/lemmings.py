@@ -46,8 +46,8 @@ def furthest(num_holes, cafes):
         furthest_dist.append(best_distance)
     return max(furthest_dist)
 
+    # print(furthest(6, [2, 4]))
 
-# print(furthest(6, [2, 4]))
 
 if __name__ == '__main__':
     import doctest
