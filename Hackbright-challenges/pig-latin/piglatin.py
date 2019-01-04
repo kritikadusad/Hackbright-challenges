@@ -16,6 +16,7 @@ For example:
 
 """
 
+
 def pig_latin(phrase):
     """Turn a phrase into pig latin.
 
@@ -24,6 +25,14 @@ def pig_latin(phrase):
         >>> pig_latin('hello awesome programmer')
         'ellohay awesomeyay rogrammerpay'
     """
+    phrase_words = phrase.split(" ")
+    pig_latin = ""
+    for word in phrase_words:
+        if word[0] in 'aieou':
+            pig_latin += word + 'yay' + ' '
+        else:
+            pig_latin += word[1:] + word[0] + 'ay' + ' '
+    return pig_latin[:-1]
 
 
 if __name__ == '__main__':
