@@ -21,9 +21,9 @@ For example::
 
 def print_digits(num):
     """Given int, print digits in reverse order, starting with the ones place."""
-    number = str(num)
-    for digit in number[::-1]:
-        print(digit)
+    while num:
+        print(num % 10)
+        num = int(num / 10)
 
 
 if __name__ == '__main__':
