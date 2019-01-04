@@ -9,8 +9,15 @@ def missing_number(nums, max_num):
 
     >>> missing_number([7, 3, 2, 4, 5, 6, 1, 9, 10], 10)
     8
-    
+
     """
+
+    all_numbers = set()
+    for num in range(1, max_num + 1):
+        all_numbers.add(num)
+    missing = set(nums)
+
+    return list((all_numbers - missing))[0]
 
 
 if __name__ == '__main__':
