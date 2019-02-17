@@ -41,17 +41,24 @@ def coins(num_coins):
 
     This should return a set of the unique amounts of change possible.
     """
+    # Recursive solution:
+    # combinations = []
+    # if num_coins == 0:
+    #     return {0}
+    # else:
+    #     previous_combi = coins(num_coins - 1)
+    #     for value in previous_combi:
+    #         combinations.append(value + 1)
+    #         combinations.append(value + 10)
 
-    combinations = []
-    if num_coins == 0:
-        return {0}
-    else:
-        previous_combi = coins(num_coins - 1)
-        for value in previous_combi:
-            combinations.append(value + 1)
-            combinations.append(value + 10)
-
-    return (set(combinations))
+    # return (set(combinations))
+    
+# Non-recursive solution:
+    combinations = set()
+    for dimes in range(num_coins + 1):
+        pennies = num_coins - dimes
+        combinations.add(dimes * 10 + pennies)
+    return combinations
 
 
 if __name__ == '__main__':
