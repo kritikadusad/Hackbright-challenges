@@ -27,11 +27,9 @@ def insertion_sort(alist):
         j = 0
         while j < i:
             if alist[i] < alist[j]:
-                temp = alist[j]
-                alist[j] = alist[i]
-                alist[i] = temp
+                temp = alist[i]
+                alist = alist[:j] + [temp] + alist[j:i] + alist[i + 1:]
             j += 1
-
         i += 1
     return alist
 
